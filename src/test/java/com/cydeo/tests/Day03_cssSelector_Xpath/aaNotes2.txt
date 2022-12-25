@@ -1,0 +1,93 @@
+.isDisplayed()
+    returns boolean value on given web element
+    if webelement displayed -> true
+    doesnt accept arg
+
+    driver.findelement(locator).isDisplayed(); -- true or false
+
+cssSelector locator:
+    7th locator from Selenium library
+    allows us to create custom locators
+    we are able to locate web elements with any attrib value
+    we not limited to name, classname etc
+    we can use any custom attrib we see a web element
+
+    tagName[attribute='value']
+    tagName[attribute="value"]
+
+    label[for='paste attribute value']
+
+    - XPATH LOCATORS
+        - xpath is one of 8 locators of Selenium
+        - xpath allows us to create custom locators using provided attributes and their values
+        - we can also use the text of the provided web element to create locators
+
+        - XPATH has 2 different types
+
+    Interview question: What is the difference between absolute xpath and relative xpath?
+
+    #1- ABSOLUTE XPATH:
+        - Absolute xpath starts with single slash "/"
+        - It starts looking in html from the root/parent element : html element
+        - It starts from html tag, and it goes down 1 by 1 until we reach to the web element we are looking for
+        - This is not good way of locating a web element.
+        - It will break with any minimal change in the html code.
+
+        /html/body/table/tbody/tr[2]/td/div/div/form/div[4]/button
+
+    #2- RELATIVE XPATH
+        - Relative xpath starts with double slash "//"
+        - "//" means you can start from anywhere in the HTML code
+        - Since we are allowed to start from anywhere in the HTML code, relative xpath is very dependable
+        - We will use relative xpath, not absolute xpath
+        - The only time your relative xpath is breaking (not working) is when/if the developer is specifically changing the attribute value we used
+
+
+    --> MAIN SYNTAX: //tagName[@attribute='value']
+
+
+    ex: <a href="https://tesla.com" name="uh68" class="ff58" id="bb22"> TESLA CYBERTRUCK </a>
+
+
+    -->             //tagName[@attribute='value']
+
+    - locate above <a> tag using relative xpath locator with different attributes.
+
+        - using name attribute         : //a[@name='uh68']
+        - using class attribute     : //a[@class='ff58']
+        - using id attribute         : //a[@id='bb22']
+
+
+    COMMONLY USED XPATH SYNTAXES:
+
+    #1- //tagName[@attribute='value']
+    we are saying: get me the given tag with provided attrib and value
+
+    #2- //tagName[contains(@attribute, 'value')]
+    we are saying: get me the given tag that has the attrib which contains
+    the value in the locator
+    Looks for the tagname that matches or contains attrib value
+
+    #3- //tagName[.='text']  same as //tagName[text()='text']
+    this locator will return the web element with the given text
+
+    #4- //*[@attribute='value']
+    we are saying:  we dont care abt which tagname, return us the
+    web element matching attrib and value result
+
+
+/*
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+driver.get("https://login.yahoo.com/account/create");
+driver.findElement(By.xpath("//input[@id='usernamereg-firstName']")).sendKeys("Your-Name"); // Will send values to First Name tab
+driver.findElement(By.xpath("//input[@id='usernamereg-lastName']")).sendKeys("Your-Last_name"); //xpath for last name box
+driver.findElement(By.xpath("//input[@id='usernamereg-yid']")).sendKeys("email@yahoo.com"); //xpath for email box
+driver.findElement(By.xpath("//input[@id='usernamereg-phone']")).sendKeys("123456789"); //xpath for phone number box
+driver.findElement(By.xpath("//select[@id='usernamereg-month']")).click(); //xpath for usermonth box
+driver.findElement(By.xpath("//input[@id='usernamereg-day']")).sendKeys("01"); //xpath for userday box
+driver.findElement(By.xpath("//input[@id='usernamereg-year']")).sendKeys("1999");// xpath for user year
+driver.findElement(By.xpath("//button[@id='reg-submit-button']")).click();// xpath for submit button
+}
+}
+
+

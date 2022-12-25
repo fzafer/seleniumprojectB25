@@ -3,6 +3,9 @@
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
+    //yeni oluşturduk:
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+
 //2. Go to https://practice.cydeo.com
         driver.navigate().to("https://practice.cydeo.com");
 
@@ -14,6 +17,13 @@
 //3. Tıklayarak
         WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
         abTestLink.click();
+
+        // WebElement loginButton = driver.findElement(By.cssSelector("input[class='login-btn']"));
+         //    WebElement loginButton = driver.findElement(By.cssSelector("input[type='submit']"));
+
+              //  WebElement loginButton = driver.findElement(By.cssSelector("input[onlick='BX.addClass(this, 'wait');']"));
+                WebElement loginButton = driver.findElement(By.cssSelector("input[value='Log In');']"));
+
 
 //4. title kontrol etme
         String expectedtitle = "No A/B Test";
