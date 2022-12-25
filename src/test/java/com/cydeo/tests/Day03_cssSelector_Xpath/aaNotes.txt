@@ -1,0 +1,105 @@
+Maven: build automation tool
+a developer tool
+
+What is build:
+Repeated steps when creating the proj and
+also managing proj
+// creating
+
+alternatives:
+jenkins
+Gradle
+Apache
+
+.findElement(By.locator("STRING")
+what does it do:
+finds and returns a single web element
+accepts locator parameter as String
+
+what is return type
+-Webelement type: comes from Selenium library
+
+it throws NoSuchElement
+
+what happens when exc is thrown in Selenium code execution
+is it gonna execute the rest lines
+Once it throws the exc, the rest of the lines will not be executed
+unless we handle it
+
+when we have NoC-Suchelement
+-wrong locator
+-synchronization: when browser driver and browser arent on same page,
+driver fill try to find web element thats not located yet
+
+.click()
+clicks the given web element
+it doesnt accept arg
+driver.click();
+
+driver.findelement().click();
+
+.sendKeys();
+pass the provided String into given WebElement
+it accepts arg
+we can pass kKeys. command into sendKeys() methods as well
+
+Keys.Enter:
+imitates user pressing ENTER from keyboard
+
+getText();
+    get thecontent from in between the opening and closing tag
+    String return type
+    doesnt accept arg
+    driver.findelement(locator).getText();
+    ex: <a href="https://tesla.com" name="uh68" class="ff58" id="bb22"> TESLA CYBERTRUCK </a>
+       --> TESLA CYBERTRUCK
+
+getAttribute();
+    accepts an attrib and return its value
+    accepts String arg
+    return type is String
+    ex: <a href="https://tesla.com" name="uh68" class="ff58" id="bb22"> TESLA CYBERTRUCK </a>
+        -->a href="https://tesla.com" name="uh68" cla
+LOCATORS:
+    finds the first matching result
+
+8 locators:
+
+1. id:
+    always unique
+    finds and returns the web alamen that matching id atrrib value
+
+2. name:
+    NOT always unique
+
+3. classname:
+    NOT always unique
+
+4. linktext:
+    looks through all LINKS in HTML page returns first result
+    ONLY ONLY works with links
+    similar to .EQUAL method in java
+    looks for EXACT matching text
+
+5. partialLinkText:
+    looks through all LINKS in HTML page returns first result
+    ONLY ONLY works with links
+    similar to .CONTAINS method in java
+    looks for PARTIAL matching text
+
+6. tagName:
+    we pass TAG name as String parameter
+    first matching result
+
+7. cssSelector:
+
+
+8. xpath:
+
+
+
+
+
+
+
+

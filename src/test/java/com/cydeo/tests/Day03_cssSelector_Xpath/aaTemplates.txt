@@ -1,0 +1,26 @@
+//1. Open Chrome browser
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+//2. Go to https://practice.cydeo.com
+        driver.navigate().to("https://practice.cydeo.com");
+
+//3. Search bar giriş ve Enter
+        Click google search button
+                WebElement googleSearchBox = driver.findElement(By.name("q"));
+                googleSearchBox.sendKeys("apple" + Keys.ENTER);
+
+//3. Tıklayarak
+        WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
+        abTestLink.click();
+
+//4. title kontrol etme
+        String expectedtitle = "No A/B Test";
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedtitle)){
+            System.out.println("title verification PASSED!");
+        }else{
+            System.out.println("title verification FAILED!!!");
+        }
