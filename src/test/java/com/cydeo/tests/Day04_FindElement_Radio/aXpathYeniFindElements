@@ -1,0 +1,20 @@
+WebElement element driver.findElement(By.xpath("//input[@name='checkbox1']"));
+
+WebElement element driver.findElement(By.xpath("//contains[@name='checkbox1']"));
+
+WebElement element driver.findElement(By.xpath("//[@.='checkbox1']"));
+
+WebElement element driver.findElement(By.xpath("//*[@name='checkbox1']"));
+
+WebElement element driver.findElement(By.xpath("//*[@name='checkbox1'] / Child"));
+
+WebElement element driver.findElement(By.xpath("//*[@name='checkbox1'] /.. parent"));
+
+WebElement element driver.findElement(By.xpath("//*[@name='checkbox1'] / following-sibling::tagname"));
+WebElement element driver.findElement(By.xpath("//*[@name='checkbox1'] / preceeding-sibling::tagname"));
+
+//*[.="don't Click"]  (text arar)
+
+
+List<WebElement> allcolors = driver.findElements(By.xpath("//input[@name='color']"));
+

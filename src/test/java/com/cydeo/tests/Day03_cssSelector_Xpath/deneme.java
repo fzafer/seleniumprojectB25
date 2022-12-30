@@ -1,14 +1,14 @@
 package com.cydeo.tests.Day03_cssSelector_Xpath;
 
-import com.cydeo.utilities.WebDriverFactory;
-import org.openqa.selenium.WebDriver;
-
 public class deneme {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+       String str = "Lionel Messi";
 
-        driver.manage().window().maximize();
+        for (int i = 0; i < str.length(); i++) {
+            System.out.print(str.charAt(i));
+            Thread.sleep(300);
+        }
     }
 }

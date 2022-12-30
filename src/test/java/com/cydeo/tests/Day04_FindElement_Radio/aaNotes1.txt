@@ -1,3 +1,19 @@
 div[id='55k']
 a[href="ww.fvrbbg.com"]
 
+StaleElementReferenceException
+
+usually throws when navigation (refresh, forward, back)
+OR
+When the element is deleted from the page
+the driver loses its reference of the webelement and throws this exc
+
+Stale: no more fresh
+
+how to handle:
+if deleted: try catch
+
+if when we navigating: redo the referencing
+
+
+

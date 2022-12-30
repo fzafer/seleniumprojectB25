@@ -114,26 +114,27 @@ COMMONLY USED XPATH SYNTAXES:
 
 findElement vs findElements()
 
-- findElement
+- findElement():
     - returns single web element
     - return type: WebElement (coming from Selenium)
     - it will throw NoSuchElementException if it cannot find a web element with given locator.
 
-- findElementS:
+- findElementS():
     - returns List of WebElements
     - return type : List<WebElement>
     - it will NOT throw exception, it will return empty list
 
 
 ------------------------------------------------------------------------------------
-
+IMLICIT WAIT
 - driver.manage().timeouts().impilicitlyWait(10, TimeUnit.SECONDS);
-
+-type of Selenium waits (like thread.sleep in java
 - Basically this line will allow our driver to wait UP TO given time if driver cannot immedieatly locate a web element.
 
 - We write it one time, and it is applied to the whole driver session.
 - Driver does not have to wait until 10 second is ended. If it finds the web element before maybe in 2 second, 5 seconds it will continue with execution.
-
+-triggered only if findelement cant locate web elements immediately
+-default value = 0, it is basicalaly turned off
 
 ------------------------------------------------------------------------------------
 

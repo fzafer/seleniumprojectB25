@@ -1,0 +1,35 @@
+What is Xpath?
+    one of 8 locators
+    allows us to create custom locators
+    we can use any attrib and any attr value to
+    create our own custom locator
+    can move from parent to child and child to parent
+
+    use / to move directly to child
+    use // to move to any child
+
+    // : means jump to the point i will be giving or
+    start from any point
+
+    if there is more than 1 matching result, we use index to select which one we want
+
+    <div id=1uh98">
+    <a href= " google 1"
+    <a href= " google 1"
+    <a href= " google 1"
+    </div
+
+    //a[@href ='https://google.com'])[1]
+
+    <div>
+        <a href= " google 1"
+        </div
+           <div>
+        <a href= " google 1"
+          </div
+                   <div>
+        <a href= " google 1"
+          </div
+              </div
+
+    //div[id='uh98']/div/a

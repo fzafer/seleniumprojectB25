@@ -44,7 +44,7 @@ public class T1_xpath_cssSelectorPrac {
         WebElement emailLabel1 = driver.findElement(By.cssSelector("label[for='email']"));
 
         //with xpath:
-        WebElement emailLabel2 = driver.findElement(By.cssSelector("//label[@for='email']"));
+        WebElement emailLabel2 = driver.findElement(By.xpath("//label[@for='email']"));
 
 
         //d. E-mail input box
@@ -52,16 +52,32 @@ public class T1_xpath_cssSelectorPrac {
         WebElement emailInputBox1 = driver.findElement(By.cssSelector("label[type='email']"));
 
         //with xpath with contains method:
-        WebElement emailInputBox12 = driver.findElement(By.cssSelector("//label[@for='email']"));
+        WebElement emailInputBox12 = driver.findElement(By.xpath("//input[contains(@pattern,'a-z']"));
 
 
 
         //e. “Retrieve password” button
+        WebElement retrievePasswordButton = driver.findElement(By.xpath("//button[.='Retrieve password']"));
+
+
         //f. “Powered by Cydeo text
+        WebElement poweredByText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
+
+
         //4. Verify all web elements are displayed.
         //First solve the task with using cssSelector only. Try to create 2 different
         //cssSelector if possible
         //Then solve the task using XPATH only. Try to create 2 different
         //XPATH locator if possible
+
+        System.out.println("homeLink1.isDisplayed() = " + homeLink1.isDisplayed());
+        System.out.println("header1.isDisplayed() = " + header1.isDisplayed());
+        System.out.println("emailLabel1.isDisplayed() = " + emailLabel1.isDisplayed());
+        System.out.println("emailInputBox1.isDisplayed() = " + emailInputBox1.isDisplayed());
+        System.out.println("retrievePasswordButton.isDisplayed() = " + retrievePasswordButton.isDisplayed());
+        System.out.println("poweredByText.isDisplayed() = " + poweredByText.isDisplayed());
+
+
+
     }
 }

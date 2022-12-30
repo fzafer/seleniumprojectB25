@@ -1,0 +1,14 @@
+-css slightly faster on just IE
+-css easier to read and write
+
+1. css cannot locate using text of webelements
+
+2. css cannot find from matches base on index
+xpath -> (pathformula) [indxnumber]
+
+3. child to parent
+//button/../  -> goes back to parent
+By.xpath("//input[@class='xjdbof']//h3[.='checkbox'])"
+
+xpath can do more than css but a little more complex
+

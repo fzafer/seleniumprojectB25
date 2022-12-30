@@ -1,0 +1,17 @@
+By.cssSelector("input[name='checkbox1']");
+
+By.cssSelector("[name='checkbox1']");
+
+tagName#idValue
+By.cssSelector("[a#uh7]");
+By.cssSelector("[#uh7]");
+
+tagName.classValue
+By.cssSelector("a.checkbox1");
+By.cssSelector(".checkbox1");
+
+from parent to child:
+tagName[attrib='value'] > childTagname
+
+WebElement header = driver.findElement(By.cssSelector("div[id='content']> div > h2") );
+

@@ -105,7 +105,11 @@ Selenium methods:
     - There are total of 8 locators.
     - We will learn first 6 today.
 
-
+Selenium 4 questions - checkpoints of methods:
+1. What does the method do -
+2. Does it accept any arguements (we have to put to make it work)
+3. Does it have a return type - void
+4. Does it through exception - no
 
 #1- linkText:
     - linkText locator will look through the TEXTS OF all of the links in the page, and return the matching link.
