@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class MultipleWindows {
@@ -52,15 +53,22 @@ public class MultipleWindows {
 
         System.out.println("actual title after click= " + actual);
 
-
-
-
-
         //6. Switch to new Window.
+        Set<String> allWindowHandles = driver.getWindowHandles();
+         for(String each : allWindowHandles ){
 
+            driver.switchTo().window(each);
+
+            System.out.println("current title while switchingwindows: " + driver.getTitle());
+        }
 
 
     //7. Assert: Title is “New Window”
+        String expected2 = "New window";
+        String actual2 = driver.getTitle();
+
+        Assert.assertEquals(actual2, expected2);
+
 
 
     }

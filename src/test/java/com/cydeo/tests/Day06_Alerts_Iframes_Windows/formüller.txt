@@ -1,0 +1,29 @@
+
+Serbest düşüş:
+    V = g * t
+    h = 1/2 gt2
+
+
+Sabit hız:
+x = V * t
+v= x / t
+
+düşey atış
+Vson = V0 + g*t
+h = ilk atış hareketi +
+    + 1/2 gt2
+
+
+Yukarı atış
+h = V t - 1/2 gt2
+
+h = v2 / 2g
+
+düşey hız
+Voy = V0 * sin a
+Vox = V0 * cos a
+
+
+
+
+

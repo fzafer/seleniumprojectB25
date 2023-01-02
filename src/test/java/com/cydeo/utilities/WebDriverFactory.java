@@ -24,12 +24,13 @@ public class WebDriverFactory {
             return new FirefoxDriver();
         }else if (browserType.equalsIgnoreCase("opera")) {
             WebDriverManager.operadriver().setup();
-            return new FirefoxDriver();
+            return new  FirefoxDriver();
         }else{
             System.out.println("Given browser doesn't exist");
             System.out.println("Driver = null");
             return null;
         }
+
     }
 
 }

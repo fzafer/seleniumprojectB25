@@ -26,6 +26,7 @@ public class DropdownTask {
         public void dropdownTasks() throws InterruptedException{
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
+
         Thread.sleep(1000);
         stateDropdown.selectByVisibleText("Illionis");
 
