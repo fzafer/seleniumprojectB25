@@ -26,6 +26,9 @@ public class BrowserUtils {
     }
 
 
+    /*
+    this method accepts 3 args
+         */
     public static void switchToWindowAndVerify(WebDriver driver, String expectedInUrl, String expectedIntitle){
         Set<String> allWindowsHandles = driver.getWindowHandles();
 
@@ -43,6 +46,15 @@ public class BrowserUtils {
 
         Assert.assertTrue(actualtitle.contains(expectedIntitle));
 
-
     }
+
+    /*
+    this method accepts a string expectedtitle and asserts if it is true
+         */
+
+    public static void verifyTitle (WebDriver driver, String expectedTitle){
+        Assert.assertEquals(driver.getTitle(), expectedTitle);
+    }
+
+
 }
