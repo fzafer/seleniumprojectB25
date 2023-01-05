@@ -1,0 +1,53 @@
+XPATH
+
+how many types
+2
+
+1. absolute
+
+2. Relative
+/ to child
+//to any child
+/.. to parent
+/preceding-sibling
+/folllowing-sibling
+
+how handle dynamic web elements
+
+1. we can locate a parent/child that is not dynamic and move from there
+2. we can use the methods provided by xpath:
+    contains, starts with, end-with
+
+    //tagName[contains@attrib, 'value')]
+    //tagName[starts-with@attrib, 'value')]
+    //tagName[ends-with@attrib, 'value')]
+
+//option[@value='3']/preceding-sibling::option[1] --> will point to opt 1 sibling
+
+locate May using its value
+//option[@value='4'][1]
+
+Mayısı 0 kabul edip 2 öncesi MArta geliyoruz
+locate March using May locator as a base and use sibling method
+//option[@value='4'][1] / preceding-sibling::option[2] --> will point to opt 1 sibling
+
+Mayısı 0 kabul edip 5 sonrasına gidiyoruz
+locate March using May locator as a base and use sibling method
+//option[@value='4'][1] / following-sibling::option[5] --> will point to opt 1 sibling
+
+how to handle WebTables
+we write custom locators
+
+how to create html tables
+1. create the table tag
+2. create the raw first
+3. create the cells inside the rows
+
+td: table data
+th: table header
+tr: table row
+
+P1. WRITE a locator that returns table 1 itself
+
+
+

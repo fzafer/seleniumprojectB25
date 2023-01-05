@@ -1,0 +1,66 @@
+    // P1. WRITE a locator that returns table 1 itself
+        //table[@id='table1']
+
+
+    //2. write a locator that returns all of the rows inside the table
+        //table[@id='table1']//tr
+
+    //3. write a locator that returns all of the rows inside the body -table
+        //table[@id='table1']/tbody//tr
+        //(yani header hariç)
+
+    //4. write a locator that returns ONLY 3rd rows inside the body
+        //table[@id='table1']/tbody//tr[3]
+
+    //5. write a locator that returns all of the cells in all of the rows inside the body
+        //table[@id='table1']/tbody//tr//td -->
+
+        //table[@id='table1']//tr//td -->
+        // if there is no th we can use this too
+
+    //6. write a locator that returns all of the first names from the table
+        yani td 2'deki tüm hücreler
+        //table[@id='table1']/tbody//tr//td[2]
+
+    //7. write a locator that returns Frank's cell specificially
+        //table[@id='table1']/tbody//tr[2]//td[2]
+
+    we are saying:
+
+    //tr[2]: second row in the tbody
+    //td[2]: second cell in the 2nd row
+
+   //8. write a locator that returns Frank's cell specificially
+    //USE FRANKS TEXT
+    //table[@id='table1']//td[.='Frank']
+
+    If u use locators with text,
+    it will be less dependable on the dynamism of the table
+
+  //9. write a locator that returns $100 cell specificially
+    //table[@id='table1']/tbody//tr[3]//td[4]   // opt 1
+    //table[@id='table1']//td[.='$100.00']     // opt2
+
+    //10. write a locator that returns JASONS due amount based on JASONS NAME cell specificially
+   //opt 1:
+       //table[@id='table1']//td[.='Jason']/../td[4]
+
+   //opt 2: sibling method
+    //yani jasondan sonraki 2. hücreye gittik, sibling cell
+    //table[@id='table1']//td[.='Jason']// following-sibling::td[2]
+
+
+    //11. write a locator that returns TIM's LAST NAME  based on TIM's NAME cell specificially
+    //opt1
+    //table[@id='table1']//td[.='Tim']/../td[1]
+
+    //opt2 siblings (1 önceki hücreye)
+    //table[@id='table1']//td[.='Tim']/preceding-sibling::td[1]
+
+    //12. write a locator that returns ALL EMAILS that has $50 due date
+        //table[@id='table1']//td[.='$50.00']/preceding-sibling::td[1]
+
+    -------------------------------------
+
+
+

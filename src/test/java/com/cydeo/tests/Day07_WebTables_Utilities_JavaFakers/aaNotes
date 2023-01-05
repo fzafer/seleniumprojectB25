@@ -153,6 +153,8 @@ return type?
 
     Syntax: driver.switchTo().window(windowHandle);
 
+-------------------
+
 
 
 
