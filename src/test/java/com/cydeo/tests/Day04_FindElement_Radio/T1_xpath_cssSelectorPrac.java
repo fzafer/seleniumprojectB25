@@ -36,7 +36,7 @@ public class T1_xpath_cssSelectorPrac {
         WebElement header1 = driver.findElement(By.cssSelector("div.example > h2"));
 
         //with xpath:
-        WebElement header2 = driver.findElement(By.cssSelector("//h2[text()='Forgot Password']"));
+        WebElement header2 = driver.findElement(By.xpath("//h2[text()='Forgot Password']"));
 
 
         //c. “E-mail” text
@@ -49,19 +49,23 @@ public class T1_xpath_cssSelectorPrac {
 
         //d. E-mail input box
         //with cssSelector SYNTAX#1:
-        WebElement emailInputBox1 = driver.findElement(By.cssSelector("label[type='email']"));
+        WebElement emailInputBox1 = driver.findElement(By.cssSelector("input[name='email']"));
 
         //with xpath with contains method:
-        WebElement emailInputBox12 = driver.findElement(By.xpath("//input[contains(@pattern,'a-z']"));
+        WebElement emailInputBox12 = driver.findElement(By.xpath("//input[contains(@pattern,'a-z')]"));
 
 
 
         //e. “Retrieve password” button
-        WebElement retrievePasswordButton = driver.findElement(By.xpath("//button[.='Retrieve password']"));
+        WebElement retrievePasswordButton = driver.findElement(By.xpath("//i[.='Retrieve password']"));
 
 
         //f. “Powered by Cydeo text
         WebElement poweredByText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
+        WebElement div1 = driver.findElement(By.xpath("//div[@class='large-6 small-12 columns']"));
+        WebElement cydLink = driver.findElement(By.xpath("//a[.='CYDEO']"));
+
+
 
 
         //4. Verify all web elements are displayed.
@@ -76,8 +80,8 @@ public class T1_xpath_cssSelectorPrac {
         System.out.println("emailInputBox1.isDisplayed() = " + emailInputBox1.isDisplayed());
         System.out.println("retrievePasswordButton.isDisplayed() = " + retrievePasswordButton.isDisplayed());
         System.out.println("poweredByText.isDisplayed() = " + poweredByText.isDisplayed());
-
-
+        System.out.println("div1is displayed = " + div1.isDisplayed());
+        System.out.println("cydLink.isDisplayed() = " + cydLink.isDisplayed());
 
     }
 }

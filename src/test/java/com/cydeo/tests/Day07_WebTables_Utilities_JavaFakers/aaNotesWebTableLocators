@@ -9,7 +9,7 @@
         //table[@id='table1']/tbody//tr
         //(yani header hariç)
 
-    //4. write a locator that returns ONLY 3rd rows inside the body
+    //4. write a locator that returns ONLY 3rd row inside the body
         //table[@id='table1']/tbody//tr[3]
 
     //5. write a locator that returns all of the cells in all of the rows inside the body

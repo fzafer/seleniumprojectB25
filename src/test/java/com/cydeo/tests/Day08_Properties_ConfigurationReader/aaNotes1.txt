@@ -1,0 +1,83 @@
+what is test data
+    data created or selected to satisfy the execution preconditions and inputs to execute one or more test cases
+
+    AUT: application under test
+
+Hard coding
+keeping your data in ext source,
+we are hardcoding some of the important test data
+
+we put them and read them
+
+we have go each by each to change
+
+ex: working on env1, but it s down, what can we do with our existing structure
+environments:
+q01.vytrack.com
+q02.vytrack.com
+stagin1.vytack.com
+stagin2.vytack.com
+prod:. www.vytack.com
+
+
+QA env: is generally used testing purposes
+Staging env: also used for testing but generally has better server support etc.
+prod: is actual product that end user is using
+
+We are passing imp test data inside of .java class directly
+this is HARDCODING
+not scalable
+not re-usable
+not easy to maintain
+not a good practice
+
+
+common file types
+Text, Excel
+CSV file
+Properties file: testData.
+it stores data in KEY = VALUE pairs
+
+browser = chrome
+env = hettps://google.com
+username= vtrvr
+password: jnrejvv
+
+.properties rules:
+
+-data stored in key=value pairs
+-there can only be 1 key with the same name
+-we shouldpass the exact key
+
+key=value is useful
+
+1. key oart will be stored in .java classed so it will be hard coded
+2. value stored in .properties, not hard coded
+
+ins of writing passing some test data in every single class, we ll use:
+configuration.properties
+
+how to read from .prop file
+-we need to use properties class. the objects of this class can read .pro files
+Properties properties = new Properties();
+
+-use FileInputStream class. allows us to read data from a file
+FileInputStream file = new  FileInputStream("file.path");
+
+after opening file stream using file path,
+we load the file to the pro obj
+properties.load(file);
+
+4. once obj is loaded, we can get any value by passing key
+properties.getProperty("browser")
+
+
+
+
+
+
+
+
+
+
+
