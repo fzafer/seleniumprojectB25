@@ -1,0 +1,22 @@
+JAVAFAKER
+
+1. Add dependency
+
+a library that allows us to generate random data in an organized manner
+we can use locals
+
+---------------
+Design pattern
+general repetable solution
+
+We ll use singleton design pattern
+-guarantees to create same obj we want to create every time
+
+1. create priv constructor
+(closing any access to this class)
+
+2. create getter setter to deliver the obj in the way we want to deliver
+-in the utility method we ll create the logic below
+    -if obj == null create new obj and return it
+    -if obj not null, just return the obj
+

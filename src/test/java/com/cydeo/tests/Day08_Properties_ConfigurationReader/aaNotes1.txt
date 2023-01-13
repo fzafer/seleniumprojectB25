@@ -38,6 +38,10 @@ CSV file
 Properties file: testData.
 it stores data in KEY = VALUE pairs
 
+key=value
+trying to avoid hard coding some important test data in our proj
+
+
 browser = chrome
 env = hettps://google.com
 username= vtrvr
@@ -72,6 +76,25 @@ properties.load(file);
 properties.getProperty("browser")
 
 
+if we have to go to .java class to change the data, means that we hardcoded
+
+how to read properties file:
+1. create properties class obj
+Properties prop = new Properties();
+FileInputStream file = new FileInputStream ("path");
+3. load properties obj with the file we opened using fileinput
+
+properties.load(file)
+
+4.
+properties.getPropertiy()"key"); --> value
+
+which part is hardcoded:
+-->key
+we can change value from outside the code
+
+
+ConfigurationReader
 
 
 

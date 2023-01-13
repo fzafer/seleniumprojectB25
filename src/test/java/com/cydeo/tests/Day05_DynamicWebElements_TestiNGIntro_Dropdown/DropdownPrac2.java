@@ -33,7 +33,7 @@ WebDriver driver;
         public void dropdown1Task() {
 
         System.out.println("Test1 started");
-        //identify the select elemen
+        //identify the select element
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='dropdown']"));
 
         //wrap this element inside select object

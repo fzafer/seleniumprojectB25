@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day05_DynamicWebElements_TestiNGIntro_Dropdown;
 
-import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.WebDriverFactorySwitch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +18,7 @@ public class Dropdown {
     @BeforeMethod
             public void setupMethod() {
 
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactorySwitch.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -30,11 +30,14 @@ public class Dropdown {
 
     @Test
     public void simpleDropdownTest (){
-      Select simpleDrowdown = new Select(driver.findElement(By.xpath("//select[@id='dropdown']")));
+      WebElement simpleDrowdown = driver.findElement(By.xpath("//select[@id='dropdown']"));
 
-      WebElement currentlySelectedOption = simpleDrowdown.getFirstSelectedOption();
+      Select currentlySelectedOption = new Select(simpleDrowdown);
 
-      String actualSimpleDropdownText = currentlySelectedOption.getText();
+      currentlySelectedOption.selectByIndex(2);
+
+
+      String actualSimpleDropdownText = currentlySelectedOption.getFirstSelectedOption().getText();
       String expectedSimpleDropdownText = "Please select an option";
 
         System.out.println(actualSimpleDropdownText);
