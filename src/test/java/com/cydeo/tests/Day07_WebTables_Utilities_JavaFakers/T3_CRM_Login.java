@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day07_WebTables_Utilities_JavaFakers;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.CRM_Utilities;
 import org.openqa.selenium.By;

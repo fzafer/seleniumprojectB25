@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day08_Properties_ConfigurationReader;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;

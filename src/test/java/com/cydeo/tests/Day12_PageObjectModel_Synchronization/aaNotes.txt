@@ -1,0 +1,57 @@
+skeleton structure of the project
+
+-src
+    -main
+    -test
+        -java
+            -com.cydeo
+                -tests
+                    -base
+                    -tests (rest of our tests)
+                -utilities
+                    -Driver
+                    -ConfigurationReader
+                    -WebDriverFactory
+                    -BrowserUtils
+                -pages
+
+
+-configuration.properties
+-pom.xml
+
+-----------------
+
+We created different packages
+-re-usability
+-to organize our code
+-less code
+-efficient
+-easy to maintain
+-to centralize
+-avoid hard coding
+
+------
+Page Object Model Design Pattern (POM)
+-creating java class for each page of web app
+
+we centralized:
+importand data: in conf.prop
+-utility merthods
+    Driver
+    ConfReader
+    BrowserUtils
+
+    The only thing we didint centralized is locating elements
+    pom design paternswill solve this
+
+----how to implemetn POM design pattern
+1. every time we create a java class for a new page,
+    we ll initilize driver
+    PageFactory.initElements(driver, this)
+    after this, we can use the OBJECT in the class
+
+2. instead of using .findelement we ll use @FindBy annotiation
+
+
+
+

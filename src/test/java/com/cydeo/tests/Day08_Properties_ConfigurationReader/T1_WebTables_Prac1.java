@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day08_Properties_ConfigurationReader;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

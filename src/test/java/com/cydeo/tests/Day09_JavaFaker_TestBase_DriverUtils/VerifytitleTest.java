@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day09_JavaFaker_TestBase_DriverUtils;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilities.BrowserUtils;
 import org.testng.annotations.Test;
 

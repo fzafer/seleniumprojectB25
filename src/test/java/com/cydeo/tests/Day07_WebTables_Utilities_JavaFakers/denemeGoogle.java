@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day07_WebTables_Utilities_JavaFakers;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
