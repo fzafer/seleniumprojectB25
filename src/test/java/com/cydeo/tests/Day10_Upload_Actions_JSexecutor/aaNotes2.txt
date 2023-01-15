@@ -1,0 +1,31 @@
+how do u handle download in selenium
+-we dont
+
+-sendKeys
+path of file
+
+
+AVTIONS
+
+Mouse events
+
+Keyboard events
+
+sendkeys
+up
+down
+scroll up down
+
+
+-----------------
+javascirp
+to pass JavaScript functions
+
+ways to scroll down
+1. js executer
+window.scrollBy(0,0)
+
+2.arguments[0].scrollIntoView --> js method
+
+3. laptoptaki pageUp down butonları
+4. movetoElement() method from Actions class

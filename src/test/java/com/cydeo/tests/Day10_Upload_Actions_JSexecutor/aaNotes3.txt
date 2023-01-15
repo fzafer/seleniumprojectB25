@@ -1,0 +1,15 @@
+CSSselector:
+
+div#content   id aramak için
+
+div.container    text aramak için
+
+css'te
+div.form-group has-feedback   //olmaz, space yerine .
+div.form-group.has-feedback
+
+div.example>h2
+Forgot Password
+
+
+select#state>option:nth-of-type(7)

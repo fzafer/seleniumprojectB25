@@ -3,7 +3,7 @@ package com.cydeo.tests.Day09_JavaFaker_TestBase_DriverUtils;
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 
-public class JacaFaker_Prac {
+public class JavaFaker_Prac {
 
     @Test
     public void test1(){
@@ -25,6 +25,14 @@ public class JacaFaker_Prac {
         System.out.println(faker.bothify("ZZ??-33##"));
 
         System.out.println("faker.chuckNorris().fact().replaceAll(\"Chuck Norris\", \"Messi\") = " + faker.chuckNorris().fact().replaceAll("Chuck Norris", "Messi"));
+
+        faker.address().city();
+        faker.address().streetAddress();
+
+        faker.color();
+
+
+
 
 
     }

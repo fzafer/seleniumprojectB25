@@ -1,0 +1,34 @@
+Configuration.properties
+
+DataDriven Testing
+-Running the same set against different set of data
+
+how to read conf prop file
+1. create Prop class obj
+Prop prop = new Prop
+open file in java memory
+FileInputStream
+
+load prop obj with fileinput
+prop.load
+
+properties.getProperty("key")
+  browser -> chrome
+
+  --------
+
+  how we create confreader
+
+  -we created re usable getProperty method
+  -----
+
+Driver Utiliy
+-not to write too many lines
+
+-----
+design pattern
+-repeatable solution to a repeating issue
+
+-singleton dp
+-makes sure we are returning the same instance
+

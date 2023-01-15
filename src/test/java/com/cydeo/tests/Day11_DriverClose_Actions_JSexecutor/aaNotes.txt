@@ -1,0 +1,53 @@
+design pattern
+-a repeatable solution to a repeating issu
+
+singleton design pattern
+making sure we are returning the same instanece when we call
+it can be different package, class or method it will instance
+
+how we created singleton des patt
+-create priv constructor
+create a public state getter
+-----
+actions
+-to handle advanced mouse and keyboard actions
+    -movetoElement
+    clickAndHold
+    dragandDrop
+    contextClick(right)
+    doubleClick
+    pause
+    perform
+    keyDown
+    keyUp
+
+we create actions class object
+we pass the driver instance into action class' constr
+now we can use the obj for the methods coming from actions class
+we must use .perform() methodas the end to perform our actions
+
+-----
+
+js executor
+-simple interface coming from selenium library that allows us to use JavaScript methods (functions) into our java selenium code
+we need to downcast our driver type to js exec interfce
+now we can use methods coming from  there
+
+------
+session id for driver= "driver" --> driver_n3j4tnj54kn44984h8
+
+driver.get
+driver.findElement
+driver.maximize
+driver.method
+quit() --> session id will be deleted, terminated
+
+
+---------
+js.executeScript("arguments[0].scrollIntoView(true)", poweredByText);
+
+js.executeScript: accepts and applies the js method
+("arguments[0]: we are passing the index number of the arguments
+.scrollIntoView(true)": scroll until the argument[0] is visible on the screen
+, poweredByText); : where we pass arguments
+
