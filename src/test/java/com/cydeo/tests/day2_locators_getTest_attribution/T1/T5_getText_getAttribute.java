@@ -30,8 +30,6 @@ public class T5_getText_getAttribute {
         }else{
             System.out.println("Header text verification FAILED!!!");
         }
-
-
         //4- Locate “First name” input box
         WebElement firstNameInput = driver.findElement(By.name("firstname"));
 

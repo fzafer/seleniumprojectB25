@@ -1,9 +1,9 @@
 package com.cydeo.tests.Day06_Alerts_Iframes_Windows;
 
 import com.cydeo.utilities.WebDriverFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -25,6 +25,7 @@ public class Alert1 {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://practice.cybertekschool.com/javascript_alerts");
+
     }
     @Test
     public void alert_Test1() throws InterruptedException {
@@ -33,7 +34,6 @@ public class Alert1 {
         WebElement informationButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
 
         informationButton.click();
-
         Alert alert = (Alert) driver.switchTo().alert();
 
         //4. Click to OK button from the alert

@@ -1,6 +1,8 @@
 package com.cydeo.tests.Denemeler;
 
 import com.cydeo.tests.base.TestBase;
+import com.cydeo.utilities.BrowserUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -21,9 +23,17 @@ public class automationExerc1 extends TestBase {
         System.out.println(driver.getTitle());
 
         //4. Click on 'Signup / Login' button
-        WebElement loginButton = driver.findElement(By.xpath("//a[@href='/login']"));
-        loginButton.click();
+     //   WebElement loginButton = driver.findElement(By.xpath("//a[@href='/login']"));
+     //   loginButton.click();
 
+        BrowserUtils.sleep(3);
+
+        WebElement loginButton = driver.findElement(By.xpath("//a[@href='/products']"));
+        loginButton.click();
+        ///html//header[@id='header']/div[@class='header-middle']//ul[@class='nav navbar-nav']//a[@href='/products']
+
+        Alert alert = (Alert) driver.switchTo().alert();
+        alert.dismiss();
         //5. Verify 'Login to your account' is visible
         WebElement loginText = driver.findElement(By.xpath("(//h2)[1]"));
         System.out.println("loginText.getText() = " + loginText.getText());

@@ -26,6 +26,7 @@ public class T2_FileUpload {
         uploadButton.click();
 
         Assert.assertTrue(Driver.getDriver().getTitle().contains("File Uploaded!"));
+        ////div[@id='content']//h3[.='File Uploaded!']
 
 
     }

@@ -20,6 +20,7 @@ public class LibraryLoginPage {
 
     }
 
+
     // 2. use @FindBy to locate web elements
 
     @FindBy(xpath = "//input[@id='inputEmail']")
@@ -29,7 +30,18 @@ public class LibraryLoginPage {
     public WebElement inputPassword;
 
     @FindBy(xpath = "//button[.='Sign in']")
-    public WebElement singInButton;
+    public WebElement signInButton;
+
+    @FindBy(xpath = "//div[.='This field is required.']/div")
+    public WebElement fieldRequiredErrorMessage;
+
+    @FindBy(xpath = "//div[.='Please enter a valid email address.']/div")
+    public WebElement enterValidEmailAddressErrorMessage;
+
+    @FindBy(xpath = "//div[.='Sorry, Wrong Email or Password.']/div")
+    public WebElement wrongEmailOrPasswordErrorMessage;
+
+
 
 
 
